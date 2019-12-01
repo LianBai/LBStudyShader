@@ -12,6 +12,7 @@
             <e p="Gray.shader" t="Include" />
             <e p="GuassVague.shader" t="Include" />
             <e p="Invert.shader" t="Include" />
+            <e p="OldPhoto.shader" t="Include" />
             <e p="Sharpen.shader" t="Include" />
             <e p="Vague.shader" t="Include" />
           </e>
