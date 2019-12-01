@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ContentModelStore">
+    <e p="C:\Users\Administrator\.Rider2019.3\system\extResources" t="IncludeRecursive" />
+    <e p="C:\Users\Administrator\.Rider2019.3\system\resharper-host\local\Transient\ReSharperHost\v193\SolutionCaches\_StudyShader.338106015.00" t="ExcludeRecursive" />
+    <e p="D:\Programe\StudyShader" t="IncludeRecursive">
+      <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
+      <e p="Assets" t="Include">
+        <e p="QFShader" t="Include">
+          <e p="November" t="Include">
+            <e p="Gradual.shader" t="Include" />
+            <e p="Gray.shader" t="Include" />
+            <e p="GuassVague.shader" t="Include" />
+            <e p="Invert.shader" t="Include" />
+            <e p="Sharpen.shader" t="Include" />
+            <e p="Vague.shader" t="Include" />
+          </e>
+          <e p="October" t="Include">
+            <e p="Additive" t="Include">
+              <e p="Additive.shader" t="Include" />
+            </e>
+            <e p="Burn" t="Include">
+              <e p="Burn.shader" t="Include" />
+              <e p="BurnAblation.shader" t="Include" />
+              <e p="BurnFbm.shader" t="Include" />
+            </e>
+            <e p="Divide" t="Include">
+              <e p="Divide.shader" t="Include" />
+            </e>
+            <e p="Fill" t="Include">
+              <e p="Fill.shader" t="Include" />
+            </e>
+            <e p="Flame" t="Include">
+              <e p="Flame.shader" t="Include" />
+              <e p="Noise.shader" t="Include" />
+              <e p="NoiseRising.shader" t="Include" />
+              <e p="NoiseRising2.shader" t="Include" />
+              <e p="PerlinNoise.shader" t="Include" />
+            </e>
+            <e p="Line" t="Include">
+              <e p="BowSting.shader" t="Include" />
+              <e p="Line.shader" t="Include" />
+            </e>
+            <e p="Rotate" t="Include">
+              <e p="BlackHole.shader" t="Include" />
+              <e p="GradulRotate.shader" t="Include" />
+              <e p="Rotate.shader" t="Include" />
+            </e>
+            <e p="Shape" t="Include">
+              <e p="CirCular.shader" t="Include" />
+              <e p="Square.shader" t="Include" />
+            </e>
+            <e p="Shear" t="Include">
+              <e p="Shear.shader" t="Include" />
+            </e>
+            <e p="Water" t="Include">
+              <e p="DoodLing.shader" t="Include" />
+              <e p="Water.shader" t="Include" />
+            </e>
+          </e>
+          <e p="September" t="Include">
+            <e p="EdgeDetection" t="Include">
+              <e p="EdgeDetection.shader" t="Include" />
+              <e p="EdgeDetectionColor.shader" t="Include" />
+            </e>
+            <e p="Gradient" t="Include">
+              <e p="4Gradent.shader" t="Include" />
+              <e p="Gradient.shader" t="Include" />
+            </e>
+            <e p="Gray" t="Include">
+              <e p="Gray.shader" t="Include" />
+            </e>
+            <e p="OldPhoto" t="Include">
+              <e p="OldPhoto.shader" t="Include" />
+            </e>
+            <e p="Pencil" t="Include">
+              <e p="Pencil.shader" t="Include" />
+            </e>
+            <e p="Pixel" t="Include">
+              <e p="Pixel.shader" t="Include" />
+            </e>
+            <e p="Sharpen" t="Include">
+              <e p="Sharpen.shader" t="Include" />
+            </e>
+            <e p="Stroke" t="Include">
+              <e p="Stroke.shader" t="Include" />
+            </e>
+            <e p="Vague" t="Include">
+              <e p="GaussVague.shader" t="Include" />
+              <e p="Vague.shader" t="Include" />
+            </e>
+          </e>
+        </e>
+        <e p="Scripts" t="Include">
+          <e p="PostFx" t="Include">
+            <e p="PostFx.cs" t="Include" />
+          </e>
+        </e>
+        <e p="Shaders" t="Include">
+          <e p="01-FirstShader.shader" t="Include" />
+          <e p="02-SecondShader.shader" t="Include" />
+          <e p="03-UseStruct.shader" t="Include" />
+          <e p="04-Diffuse.shader" t="Include" />
+          <e p="05-Diffuse Fragment.shader" t="Include" />
+          <e p="06-Diffuse Fragment HalfLambert.shader" t="Include" />
+          <e p="07-Specular Vertex.shader" t="Include" />
+          <e p="08-Specular Fragment.shader" t="Include" />
+          <e p="09-Specular Fragment BlinnPhong.shader" t="Include" />
+          <e p="10-Diffuse Specular.shader" t="Include" />
+          <e p="11-Single Texture.shader" t="Include" />
+          <e p="12-Rock.shader" t="Include" />
+          <e p="13-Rock NormalMap.shader" t="Include" />
+          <e p="14-Rock Alpha.shader" t="Include" />
+        </e>
+      </e>
+      <e p="obj" t="ExcludeRecursive" />
+      <e p="Packages" t="ExcludeRecursive" />
+      <e p="StudyShader.sln" t="IncludeFlat" />
+      <e p="Temp\bin" t="ExcludeRecursive" />
+    </e>
+  </component>
+</project>
