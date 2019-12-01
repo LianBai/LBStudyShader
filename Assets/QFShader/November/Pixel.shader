@@ -1,11 +1,11 @@
-﻿Shader "Unlit/LBShader4November/Vague"
+﻿Shader "Unlit/LBShader4November/Pixel"
 {
     Properties
     {
         _MainTex ("Texture", 2D) = "white" {}
         
-        // 模糊程度
-        _Blur("Blur",Range(0,1)) = 0.03
+        // 像素个数
+        _Pixels ("Pixels",Range(4,256)) = 64
     }
     SubShader
     {
@@ -40,22 +40,16 @@
             }
 
             sampler2D _MainTex;
-            float _Blur;
+            float _Pixels;
 
             fixed4 frag (v2f i) : SV_Target
             {
-                // 1 / 16
-                float distance = _Blur * 0.0625f;
+                float offset = _Pixels;
 
+                // 去掉小数点取整
+                float2 pixelUV = round(i.uv * offset) / offset;
 
-                fixed4 color = tex2D (_MainTex, i.uv) * 0.5f;
-
-                color += tex2D(_MainTex,float2(i.uv.x - distance,i.uv.y)) * 0.125f;
-                color += tex2D(_MainTex,float2(i.uv.x + distance,i.uv.y)) * 0.125f;
-                color += tex2D(_MainTex,float2(i.uv.x,i.uv.y + distance)) * 0.125f;
-                color += tex2D(_MainTex,float2(i.uv.x,i.uv.y - distance)) * 0.125f;
-
-                return color;
+                return tex2D(_MainTex, pixelUV);
             }
             ENDCG
         }

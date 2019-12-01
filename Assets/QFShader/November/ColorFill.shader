@@ -1,16 +1,19 @@
-﻿Shader "Unlit/LBShader4November/Vague"
+﻿Shader "Unlit/LBShader4November/ColorFill"
 {
     Properties
     {
         _MainTex ("Texture", 2D) = "white" {}
         
-        // 模糊程度
-        _Blur("Blur",Range(0,1)) = 0.03
+        // 要填充的颜色
+        _FillColor("_FillColor",Color) = (1,0,0,1)
+        // 填充的程度
+        _FillFactor("_FillFactor",Range(0,1)) = 0.5
     }
     SubShader
     {
         // No culling or depth
         Cull Off ZWrite Off ZTest Always
+
         Pass
         {
             CGPROGRAM
@@ -31,6 +34,11 @@
                 float4 vertex : SV_POSITION;
             };
 
+            sampler2D _MainTex;
+            
+            fixed4 _FillColor;
+            float _FillFactor;
+
             v2f vert (appdata v)
             {
                 v2f o;
@@ -39,23 +47,12 @@
                 return o;
             }
 
-            sampler2D _MainTex;
-            float _Blur;
-
             fixed4 frag (v2f i) : SV_Target
             {
-                // 1 / 16
-                float distance = _Blur * 0.0625f;
+                fixed4 texColor = tex2D(_MainTex,i.uv);
+                fixed4 fillColor = texColor.a * _FillColor;
 
-
-                fixed4 color = tex2D (_MainTex, i.uv) * 0.5f;
-
-                color += tex2D(_MainTex,float2(i.uv.x - distance,i.uv.y)) * 0.125f;
-                color += tex2D(_MainTex,float2(i.uv.x + distance,i.uv.y)) * 0.125f;
-                color += tex2D(_MainTex,float2(i.uv.x,i.uv.y + distance)) * 0.125f;
-                color += tex2D(_MainTex,float2(i.uv.x,i.uv.y - distance)) * 0.125f;
-
-                return color;
+                return lerp(texColor,fillColor,_FillFactor);
             }
             ENDCG
         }

@@ -1,16 +1,19 @@
-﻿Shader "Unlit/LBShader4November/Vague"
+﻿Shader "Unlit/LBShader4November/Stroke"
 {
     Properties
     {
         _MainTex ("Texture", 2D) = "white" {}
         
-        // 模糊程度
-        _Blur("Blur",Range(0,1)) = 0.03
+        _Color("Tint", Color) = (1,0,0,1)
+		_ShearX("ShaerX",Range(0,1)) = 0.5
+		_ShearY("ShaerY", Range(0,1)) = 0.5
+		_ShearTail("ShaerTail",Range(0,1)) = 0
     }
     SubShader
     {
         // No culling or depth
         Cull Off ZWrite Off ZTest Always
+
         Pass
         {
             CGPROGRAM
@@ -40,21 +43,16 @@
             }
 
             sampler2D _MainTex;
-            float _Blur;
+            
+            float _Color;
+			float _ShearX;
+			float _ShearY;
+			float _ShearTail;
 
             fixed4 frag (v2f i) : SV_Target
             {
-                // 1 / 16
-                float distance = _Blur * 0.0625f;
-
-
-                fixed4 color = tex2D (_MainTex, i.uv) * 0.5f;
-
-                color += tex2D(_MainTex,float2(i.uv.x - distance,i.uv.y)) * 0.125f;
-                color += tex2D(_MainTex,float2(i.uv.x + distance,i.uv.y)) * 0.125f;
-                color += tex2D(_MainTex,float2(i.uv.x,i.uv.y + distance)) * 0.125f;
-                color += tex2D(_MainTex,float2(i.uv.x,i.uv.y - distance)) * 0.125f;
-
+                fixed4 color = tex2D(_MainTex, i.uv) * smoothstep(_ShearTail, _ShearX, i.uv.x) * smoothstep(_ShearTail, _ShearY, i.uv.y);
+                
                 return color;
             }
             ENDCG

@@ -1,16 +1,17 @@
-﻿Shader "Unlit/LBShader4November/Vague"
+﻿Shader "Unlit/LBShader4November/Line"
 {
     Properties
     {
         _MainTex ("Texture", 2D) = "white" {}
         
-        // 模糊程度
-        _Blur("Blur",Range(0,1)) = 0.03
+        _Color("Tint", Color) = (0,1,0,1)
+		_Width("Width",Range(0,1)) = 0.1
     }
     SubShader
     {
         // No culling or depth
         Cull Off ZWrite Off ZTest Always
+
         Pass
         {
             CGPROGRAM
@@ -40,21 +41,23 @@
             }
 
             sampler2D _MainTex;
-            float _Blur;
+            
+            float4 _Color;
+			float _Width;
 
+            float IsInLine(float x,float y)
+            {
+                return smoothstep(x - _Width, x, y) -
+                     smoothstep(x, x + _Width, y);
+            }
+				
             fixed4 frag (v2f i) : SV_Target
             {
-                // 1 / 16
-                float distance = _Blur * 0.0625f;
+                fixed4 color = tex2D(_MainTex,i.uv);
+				float fx = 1 - i.uv.x;
 
-
-                fixed4 color = tex2D (_MainTex, i.uv) * 0.5f;
-
-                color += tex2D(_MainTex,float2(i.uv.x - distance,i.uv.y)) * 0.125f;
-                color += tex2D(_MainTex,float2(i.uv.x + distance,i.uv.y)) * 0.125f;
-                color += tex2D(_MainTex,float2(i.uv.x,i.uv.y + distance)) * 0.125f;
-                color += tex2D(_MainTex,float2(i.uv.x,i.uv.y - distance)) * 0.125f;
-
+				color = lerp(color, _Color, IsInLine(i.uv.x, i.uv.y)) * lerp(color, _Color, IsInLine(fx, i.uv.y));
+					
                 return color;
             }
             ENDCG

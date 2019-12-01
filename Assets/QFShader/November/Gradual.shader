@@ -5,10 +5,10 @@
         _MainTex ("Texture", 2D) = "white" {}
         
         // 四个点的颜色设置
-        _LeftTopColor("LeftTopColor",Color) = (1,1,1,1)
-        _LeftBottomColor("LeftBottomColor",Color) = (1,1,1,1)
-        _RightTopColor("RightTopColor",Color) = (1,1,1,1)
-        _RightBottomColor("RightBottomColor",Color) = (1,1,1,1)
+        _LeftTopColor("LeftTopColor",Color) = (1,0,0,1)
+        _LeftBottomColor("LeftBottomColor",Color) = (0,1,0,1)
+        _RightTopColor("RightTopColor",Color) = (0,0,1,1)
+        _RightBottomColor("RightBottomColor",Color) = (0.5,0.5,1,1)
     }
     SubShader
     {
