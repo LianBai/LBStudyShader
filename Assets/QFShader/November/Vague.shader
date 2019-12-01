@@ -5,7 +5,7 @@
         _MainTex ("Texture", 2D) = "white" {}
         
         // 模糊程度
-        _Blur("Blur",Range(0,1)) = 0.03
+        _Blur("Blur",Range(0,1)) = 0.3
     }
     SubShader
     {
