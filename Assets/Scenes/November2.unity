@@ -231,7 +231,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &237361343
 Transform:
   m_ObjectHideFlags: 0
@@ -329,7 +329,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &303052536
 Transform:
   m_ObjectHideFlags: 0
@@ -561,7 +561,7 @@ GameObject:
   - component: {fileID: 508769639}
   - component: {fileID: 508769638}
   m_Layer: 0
-  m_Name: GrayCamera
+  m_Name: DistortionCamera
   m_TagString: MainCamera
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -579,7 +579,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f1c526b501548c54691f9e07122249ab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Shader: {fileID: 4800000, guid: 870958b9e3e52b448a56666d8637ecfc, type: 3}
+  Shader: {fileID: 4800000, guid: defdbf664477d0d4ca0257bffe128080, type: 3}
   mMaterial: {fileID: 0}
 --- !u!81 &508769639
 AudioListener:
@@ -843,7 +843,7 @@ GameObject:
   - component: {fileID: 758303444}
   - component: {fileID: 758303443}
   m_Layer: 0
-  m_Name: GuassVagueCamera
+  m_Name: BloomCamera
   m_TagString: MainCamera
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -861,7 +861,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f1c526b501548c54691f9e07122249ab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Shader: {fileID: 4800000, guid: ee7e2b6799268934c96dddb849db8a12, type: 3}
+  Shader: {fileID: 4800000, guid: c8c322502a1b01a48bd722f004df64a6, type: 3}
   mMaterial: {fileID: 0}
 --- !u!81 &758303444
 AudioListener:
@@ -941,7 +941,7 @@ GameObject:
   - component: {fileID: 981067976}
   - component: {fileID: 981067975}
   m_Layer: 0
-  m_Name: GradualCamera
+  m_Name: FireCamera
   m_TagString: MainCamera
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -959,7 +959,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f1c526b501548c54691f9e07122249ab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Shader: {fileID: 4800000, guid: b3c39c0e570ff5941b831968acbe17ac, type: 3}
+  Shader: {fileID: 4800000, guid: 099fc1e218846c146826ffdd072eeede, type: 3}
   mMaterial: {fileID: 0}
 --- !u!81 &981067976
 AudioListener:
@@ -1135,7 +1135,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1265307277
 Transform:
   m_ObjectHideFlags: 0
@@ -1233,7 +1233,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1288060749
 Transform:
   m_ObjectHideFlags: 0
@@ -1326,7 +1326,7 @@ GameObject:
   - component: {fileID: 1391456340}
   - component: {fileID: 1391456339}
   m_Layer: 0
-  m_Name: VagueCamera
+  m_Name: BurnCamera
   m_TagString: MainCamera
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1344,7 +1344,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f1c526b501548c54691f9e07122249ab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Shader: {fileID: 4800000, guid: f4b445d45cfefb241aa14aaebb8159a4, type: 3}
+  Shader: {fileID: 4800000, guid: 9d80b294b39ce15488c8f75f7a29a3a9, type: 3}
   mMaterial: {fileID: 0}
 --- !u!81 &1391456340
 AudioListener:
@@ -1429,7 +1429,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1589876947
 Transform:
   m_ObjectHideFlags: 0
@@ -1527,7 +1527,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1664430852
 Transform:
   m_ObjectHideFlags: 0
@@ -1620,7 +1620,7 @@ GameObject:
   - component: {fileID: 1689126112}
   - component: {fileID: 1689126111}
   m_Layer: 0
-  m_Name: SharpenCamera
+  m_Name: BloomShadowCamera
   m_TagString: MainCamera
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1638,7 +1638,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f1c526b501548c54691f9e07122249ab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Shader: {fileID: 4800000, guid: 5fdc933e8c4534a4caf1cf8edd162766, type: 3}
+  Shader: {fileID: 4800000, guid: 022ebe1c6180d3241a627de44d9cba50, type: 3}
   mMaterial: {fileID: 0}
 --- !u!81 &1689126112
 AudioListener:
@@ -1718,7 +1718,7 @@ GameObject:
   - component: {fileID: 1730445202}
   - component: {fileID: 1730445205}
   m_Layer: 0
-  m_Name: ColorReversalCamera
+  m_Name: BlackHoleCamera
   m_TagString: MainCamera
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1801,7 +1801,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f1c526b501548c54691f9e07122249ab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Shader: {fileID: 4800000, guid: 0aca2208e4b74394bbdb48b3feaefed8, type: 3}
+  Shader: {fileID: 4800000, guid: b9c51072e03388a4da800220f0df3dab, type: 3}
   mMaterial: {fileID: 0}
 --- !u!1 &1860793945
 GameObject:
@@ -1896,7 +1896,7 @@ GameObject:
   - component: {fileID: 1862298259}
   - component: {fileID: 1862298258}
   m_Layer: 0
-  m_Name: EdgeDetectionCamera
+  m_Name: NightVisionFenceCamera
   m_TagString: MainCamera
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1914,7 +1914,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f1c526b501548c54691f9e07122249ab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Shader: {fileID: 4800000, guid: f477d106159237f4897251d5d8485c7d, type: 3}
+  Shader: {fileID: 4800000, guid: 0cc2a56880ac27c40a428610ee0efc07, type: 3}
   mMaterial: {fileID: 0}
 --- !u!81 &1862298259
 AudioListener:
@@ -1994,7 +1994,7 @@ GameObject:
   - component: {fileID: 1908647491}
   - component: {fileID: 1908647490}
   m_Layer: 0
-  m_Name: OldPhotoCamera
+  m_Name: NightVisionCamera
   m_TagString: MainCamera
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2012,7 +2012,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f1c526b501548c54691f9e07122249ab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Shader: {fileID: 4800000, guid: fee3b11c08bb18e44886b0e7c12a9730, type: 3}
+  Shader: {fileID: 4800000, guid: 0f75c113976e138439d4a903fdd03055, type: 3}
   mMaterial: {fileID: 0}
 --- !u!81 &1908647491
 AudioListener:
@@ -2097,7 +2097,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &2062886492
 Transform:
   m_ObjectHideFlags: 0
@@ -2195,7 +2195,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &2064444162
 Transform:
   m_ObjectHideFlags: 0
